@@ -1,0 +1,21 @@
+# custom.rules — Règles Suricata personnalisées
+# Lab Red Team / Blue Team
+# Auteure : Félicie Leslie NGUIAMBA MIFOUNGO
+# Date : Juin 2026
+
+
+# Règle 1 — Détection scan SYN (Nmap)
+# Déclenche si 10 paquets SYN reçus en 1 seconde depuis la même source
+alert tcp any any -> $HOME_NET any (msg:"NMAP SYN Scan detecte"; flags:S; threshold:type threshold, track by_src, count 10, seconds 1; classtype:network-scan; sid:9000001; rev:1;)
+
+# Règle 2 — Tentative connexion SSH
+# Toute tentative de connexion vers le port 22
+alert tcp any any -> $HOME_NET 22 (msg:"Tentative connexion SSH"; classtype:attempted-admin; sid:9000002; rev:2;)
+
+# Règle 3 — Path Traversal HTTP
+# Détecte la séquence "../" dans l'URI des requêtes HTTP
+alert http any any -> $HOME_NET 80 (msg:"Path Traversal tentative"; content:"../"; http_uri; classtype:web-application-attack; sid:9000003; rev:2;)
+
+# Règle 4 — Ping Sweep ICMP
+# Déclenche si 5 pings ICMP Echo Request reçus en 2 secondes
+alert icmp any any -> $HOME_NET any (msg:"ICMP Ping Sweep"; itype:8; threshold:type threshold, track by_src, count 5, seconds 2; classtype:network-scan; sid:9000004; rev:1;)
