@@ -344,9 +344,9 @@ lab-red-blue-team/
 Cycle Ingénieur Informatique — 3IL Ingénieurs, Limoges  
 Spécialité : Réseau & Sécurité  
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Félicie_NGUIAMBA-blue)](https://www.linkedin.com/in/leslie-nguiamba-8846852a0)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Félicie_NGUIAMBA-blue)](https://www.linkedin.com/in/félicie-nguiamba-8846852a0)
 [![Email](https://img.shields.io/badge/Email-felicienguiamba@gmail.com-red)](mailto:felicienguiamba@gmail.com)
 
 ---
 
-*Lab réalisé en autonomie dans le cadre de la préparation au parcours en Réseau & Sécurité*
+*Lab réalisé en autonomie dans le cadre de la préparation au parcours Réseau & Sécurité*
